@@ -1,0 +1,11 @@
+[Unit]
+Description=Update the database with the cars
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/Studienarbeit_OBD_Datenlogger/MySQL-server/update_table_cars.py
+
+[Install]
+WantedBy=multi-user.target
